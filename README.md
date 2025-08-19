@@ -5,23 +5,11 @@
 - Maven 3.9+
 - PostgreSQL 15+
 
-## Configuración rápida
-1. Crear base de datos:
-   ```sql
-   CREATE DATABASE forohub;
-   ```
-2. Edita `src/main/resources/application.properties` con tus credenciales de Postgres.
-3. Ejecuta:
-   ```bash
-   mvn spring-boot:run
-   ```
+## Descripción
+ForoHub es una aplicación de foro que permite a los usuarios registrarse, iniciar sesión y crear, actualizar, ver y eliminar tópicos. La autenticación se gestiona mediante JWT y la seguridad mediante Spring Security.
 
-## Endpoints
-- `POST /auth/register` – body: `{ "username":"juan", "password":"1234" }`
-- `POST /auth/login` – devuelve `{ "token": "..." }`
-- Usa `Authorization: Bearer <token>` para:
-  - `POST /topicos`
-  - `GET /topicos`
-  - `GET /topicos/{id}`
-  - `PUT /topicos/{id}`
-  - `DELETE /topicos/{id}`
+## Funcionalidades
+- Registro y login de usuarios.
+- Creación, listado, actualización, detalle y eliminación de tópicos.
+- Seguridad con JWT y roles básicos.
+- API REST para consumo de datos.
